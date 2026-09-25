@@ -1,5 +1,19 @@
 {
   "appId": "org.med.scroll",
   "appName": "Studia",
-  "webDir": "www"
+  "webDir": "www",
+  "server": {
+    "iosScheme": "capacitor",
+    "hostname": "localhost",
+    "allowNavigation": [
+      "medscroll.github.io",
+      "*.tonsite.com",
+      "un-autre-site.net",
+      "*.un-autre-site.net"
+    ]
+  },
+  "ios": {
+    "contentInset": "always",
+    "limitsNavigationsToAppBoundDomains": false
+  }
 }
