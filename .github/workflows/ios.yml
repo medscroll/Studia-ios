@@ -20,10 +20,10 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
+      - name: Install Capacitor CLI globally
+        run: npm install -g @capacitor/cli@6
       - name: Add iOS platform
         run: npx cap add ios
-
       - name: Sync Capacitor
         run: npx cap sync ios
 
