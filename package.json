@@ -1,6 +1,7 @@
 {
   "name": "mon-app",
   "version": "1.0.0",
+  "description": "WebView hybride iOS",
   "scripts": {
     "cap:add:ios": "cap add ios",
     "cap:sync": "cap sync"
