@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Mon App</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, sans-serif;
+      background: #0f0f1a;
+      color: #fff;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .menu { display: flex; flex-direction: column; gap: 12px; margin-top: 30px; }
+    .menu a {
+      display: block;
+      padding: 16px;
+      background: #1e1e2e;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 12px;
+      border-left: 4px solid #007aff;
+      transition: transform .15s;
+    }
+    .menu a:active { transform: scale(0.97); }
+    h1 { text-align: center; margin-bottom: 20px; color: #007aff; }
+  </style>
+</head>
+<body>
+  <h1>Mon App</h1>
 
+  <div class="menu">
+    <!-- Liens externes : ils s'ouvriront dans la WebView si le domaine est dans allowNavigation -->
+    <a href="https://medscroll.github.io">🌐 Site principal</a>
+    <a href="https://tonsite.com/contact">📞 Contact</a>
+    <a href="https://un-autre-site.net">📰 Actualités</a>
+  </div>
+
+  <script>
+    // Exemple : détecter si on est dans la WebView Capacitor
+    const isNative = window.location.protocol === 'capacitor:';
+    console.log('App native iOS ?', isNative);
+
+    // Exemple : interception des liens (optionnel)
+    document.querySelectorAll('.menu a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        console.log('Ouverture de :', link.href);
+      });
+    });
+  </script>
+</body>
+</html>
